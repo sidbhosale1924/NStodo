@@ -1,38 +1,173 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: wheat;
+}
+.header {
+  background-color: #333;
+  border-bottom: 4px solid orange;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+  height: 65px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-bar {
+  height: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-around;
+}
+
+.logo h1 {
   color: white;
+  font-size: 30px;
+}
+.logo h1:hover {
+  letter-spacing: 2px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.logo h1 span {
+  color: orange;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.content {
+  display: flex;
+  max-width: 992px;
+  margin: auto;
+}
+
+.side-bar {
+  user-select: none;
+  width: 270px;
+  height: 100vh;
+  padding-top: 75px;
+  border-right: 1px solid orange;
+  background-color: #fafafa;
+}
+
+.side-bar div {
+  margin-bottom: 10px;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 7px;
+}
+
+.side-bar div .icon {
+  margin-right: 10px;
+}
+
+.tasks {
+  height: 100vh;
+  width: calc(992px - 270px);
+  background-color: white;
+  padding: 75px 20px 0;
+}
+
+.tasks .add-btn {
+  cursor: pointer;
+}
+
+.tasks .add-btn .plus {
+  color: #dd4b39;
+  font-size: 18px;
+}
+
+.tasks .add-btn .add-text-btn {
+  color: #545454;
+  font-size: 14px;
+  margin-left: 15px;
+}
+
+.tasks .task-conatiner {
+  margin-top: 10px;
+}
+
+.tasks .task-conatiner input {
+  width: 100%;
+  height: 35px;
+  border: 1px solid #ddd;
+  background-color: white;
+  padding: 0 5px;
+  margin-right: 10px;
+  border-radius: 3px;
+}
+
+.task-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.action-btn {
+  margin: 10px 0;
+}
+.save-btn {
+  border: 1px solid orange;
+  outline: none;
+  background: white;
+  color: orange;
+  font-weight: bolder;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+.save-btn:hover {
+  cursor: pointer;
+  background-color: orange;
+  color: white;
+  letter-spacing: 1.5px;
+  border: none;
+}
+.save-btn:disabled {
+  background-color: #777;
+  color: white;
+  border: none;
+}
+
+.cancel-btn {
+  outline: none;
+  color: #dd4b39;
+  background-color: white;
+  border-radius: 3px;
+  padding: 5px;
+  border: 1px solid #dd4b39;
+  margin-left: 10px;
+  font-weight: bolder;
+}
+
+.cancel-btn:hover {
+  background-color: #dd4b39;
+  color: white;
+  letter-spacing: 1.5px;
+  border: none;
+  cursor: pointer;
+}
+.hrline {
+  margin: 10px 0 25px 0;
+}
+
+.list {
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.list-container {
+  padding: 0 20px;
+}
+
+.list-container .list-items {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-container .list-items:not(:last-child) {
+  border-bottom: 1px solid #dd4b39;
 }
